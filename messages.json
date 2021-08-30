@@ -1,0 +1,54 @@
+{
+  "workChat": [
+    {
+      "messageId": 1629035424650,
+      "sender": "JohnDoe",
+      "messageText": "Hi",
+      "date": "15/08/2021 04:50"
+    },
+    {
+      "messageId": 1629035428008,
+      "sender": "JohnDoe",
+      "messageText": "How are you",
+      "date": "15/08/2021 04:50"
+    },
+    {
+      "messageId": 1629035448855,
+      "sender": "JohnDoe",
+      "messageText": "Emoji Test😆👍😍😘😀😅😇😜😂😱🙃🍑🍑🦝😄🐺🐺🐱🇰🇲🇱🇨🐩🍏🍓📍",
+      "date": "15/08/2021 04:50"
+    },
+    {
+      "messageId": 1629035528961,
+      "sender": "JaneDoe",
+      "messageText": "Anotheruser",
+      "date": "15/08/2021 04:52"
+    },
+    {
+      "messageId": 1629035532185,
+      "sender": "JaneDoe",
+      "messageText": "Check",
+      "date": "15/08/2021 04:52"
+    }
+  ],
+  "floodChat": [
+    {
+      "messageId": 1629035459713,
+      "sender": "JohnDoe",
+      "messageText": "AnotherTest",
+      "date": "15/08/2021 04:50"
+    },
+    {
+      "messageId": 1629035484938,
+      "sender": "JohnDoe",
+      "messageText": "Check this out👾🖐️✋👉👈🤙🤘✌️",
+      "date": "15/08/2021 04:51"
+    },
+    {
+      "messageId": 1629035539993,
+      "sender": "JaneDoe",
+      "messageText": "Hello there",
+      "date": "15/08/2021 04:52"
+    }
+  ]
+}

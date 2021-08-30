@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import { SignUpPage } from "./components/SignUpPage";
+import { SignInPage } from "./components/SignInPage";
+import { MainPage } from "./components/MainPage";
+import "./App.css";
+import { authStore } from "./stores/authStore";
+import { observer } from "mobx-react-lite";
+import { StoreContextProvider } from "./contexts/StoreContext";
 
-function App() {
+export const App = observer(() => {
+  const { currentUser } = authStore.authData;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StoreContextProvider>
+      <Router>
+        <Switch>
+          <Route path="/signup">{currentUser ? <Redirect to="/" /> : <SignUpPage />}</Route>
+          <Route path="/signin">{currentUser ? <Redirect to="/" /> : <SignInPage />}</Route>
+          <Route path="/">{currentUser ? <MainPage /> : <Redirect to="/signin" />}</Route>
+        </Switch>
+      </Router>
+    </StoreContextProvider>
   );
-}
-
-export default App;
+});
